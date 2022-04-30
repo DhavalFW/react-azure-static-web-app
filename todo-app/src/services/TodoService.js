@@ -4,12 +4,21 @@ export async function getAllTasks() {
     return await response.json();
 }
 
-export async function createTask(data) {
+export async function createTask1(data) {
     const response = await fetch(`/api/todos`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({task: data})
     })
+    return await response.json();
+}
+
+export async function createTask(data) {
+    const response = await fetch(`/api/url`, {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' }
+    })
+    console.log(response.json());
     return await response.json();
 }
 
